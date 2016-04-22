@@ -1,0 +1,17 @@
+{
+  "name": "thrnio-ip",
+  "version": "0.1.0",
+  "author": "thrnio",
+  "summary": "Provide some type aliases for IP addresses",
+  "license": "Apache-2.0",
+  "source": "https://github.com/thrnio/puppet-ip",
+  "project_page": "https://github.com/thrnio/puppet-ip",
+  "issues_url": "https://github.com/thrnio/puppet-ip/issues",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.4.0 <5.0.0"
+    }
+  ],
+  "dependencies": [ ],
+}
