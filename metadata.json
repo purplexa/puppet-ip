@@ -1,8 +1,8 @@
 {
   "name": "thrnio-ip",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "thrnio",
-  "summary": "Provide some type aliases for IP addresses",
+  "summary": "Provide some data type aliases for IP addresses",
   "license": "Apache-2.0",
   "source": "https://github.com/thrnio/puppet-ip",
   "project_page": "https://github.com/thrnio/puppet-ip",
