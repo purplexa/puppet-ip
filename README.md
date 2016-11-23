@@ -36,6 +36,7 @@ in CIDR format IPv4 addresses.
 'FF01::101/60' =~ IP::Address                             # true
 '::' =~ IP::Address                                       # true
 '12AB::CD30:192.168.0.1' =~ IP::Address                   # true
+'FE80::1%eth0' =~ IP::Address                             # true
 ~~~
 
 ### `IP::Address::V4`
@@ -75,6 +76,7 @@ address prefix.
 'FF01::101/60' =~ IP::Address::V6                             # true
 '::' =~ IP::Address::V6                                       # true
 '12AB::CD30:192.168.0.1' =~ IP::Address::V6                   # true
+'FE80::1%eth0' =~ IP::Address::V6                             # true
 ~~~
 
 ## Reference
@@ -128,6 +130,8 @@ The `IP::Address::V6::Compressed` alias will match an IPv6 address which may
 contain `::` used to compress zeros as documented in section 2.2.2 of RFC 2373.
 It will match addresses with or without an address prefix as documented in
 section 2.3 of RFC 2373.
+Additionally matched are link-local IPv6 addresses beginning with fe80: and
+suffixed with %interface zone_id, as mentioned in section 11.2 of RFC 4007.
 
 ### `IP::Address::V6::Alternative`
 
@@ -150,6 +154,8 @@ The `IP::Address::V6::NoSubnet::Compressed` alias will match an IPv6 address
 which may contain `::` used to compress zeros as documented in section 2.2.2 of
 RFC 2373. It will only match addresses without an address prefix as documented
 in section 2.3 of RFC 2373.
+Additionally matched are link-local IPv6 addresses beginning with fe80: and
+suffixed with %interface zone_id, as mentioned in section 11.2 of RFC 4007.
 
 ### `IP::Address::V6::Alternative`
 
