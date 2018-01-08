@@ -140,3 +140,5 @@ crashlytics-build.properties
 #
 junos/junos.conf
 junos/junos.op
+
+Gemfile.lock
