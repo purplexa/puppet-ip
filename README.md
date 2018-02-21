@@ -29,6 +29,7 @@ in CIDR format IPv4 addresses.
 '10.1.240.4/24' =~ IP::Address                            # true
 '52.10.10.141' =~ IP::Address                             # true
 '192.168.1' =~ IP::Address                                # false
+'0.0.0.0/0' =~ IP::Address                                # true
 'FEDC:BA98:7654:3210:FEDC:BA98:7654:3210' =~ IP::Address  # true
 'FF01:0:0:0:0:0:0:101' =~ IP::Address                     # true
 'FF01::101' =~ IP::Address                                # true
@@ -36,6 +37,7 @@ in CIDR format IPv4 addresses.
 'FF01::101/60' =~ IP::Address                             # true
 '::' =~ IP::Address                                       # true
 '12AB::CD30:192.168.0.1' =~ IP::Address                   # true
+'::0/0' =~ IP::Address                                    # true
 ~~~
 
 ### `IP::Address::V4`
@@ -52,6 +54,7 @@ documented and inconsistently supported.
 '8.8.4.4' =~ IP::Address::V4                                  # true
 '10.1.240.4/24' =~ IP::Address::V4                            # true
 '52.10.10.141' =~ IP::Address::V4                             # true
+'0.0.0.0/0' =~ IP::Address::V4                                # true
 '192.168.1' =~ IP::Address::V4                                # false
 'FEDC:BA98:7654:3210:FEDC:BA98:7654:3210' =~ IP::Address::V4  # false
 '12AB::CD30:192.168.0.1' =~ IP::Address::V4                   # false
@@ -67,13 +70,14 @@ address prefix.
 
 ~~~puppet
 '127.0.0.1' =~ IP::Address::V6                                # false
-'10.1.240.4/24' =~ IP::Address::V6                            # true
+'10.1.240.4/24' =~ IP::Address::V6                            # false
 'FEDC:BA98:7654:3210:FEDC:BA98:7654:3210' =~ IP::Address::V6  # true
 'FF01:0:0:0:0:0:0:101' =~ IP::Address::V6                     # true
 'FF01::101' =~ IP::Address::V6                                # true
 'FF01:0:0:0:0:0:0:101/32' =~ IP::Address::V6                  # true
 'FF01::101/60' =~ IP::Address::V6                             # true
 '::' =~ IP::Address::V6                                       # true
+'::0/0' =~ IP::Address::V6                                    # true
 '12AB::CD30:192.168.0.1' =~ IP::Address::V6                   # true
 ~~~
 
