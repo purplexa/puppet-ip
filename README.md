@@ -1,3 +1,10 @@
+# Deprecated
+
+This module has been deprecated and is no longer maintained. Its
+functionality has been incorporated in
+[puppetlabs/stdlib](https://github.com/puppetlabs/puppetlabs-stdlib#stdlibipaddress)
+v4.25.0.
+
 ## Table of Contents
 
 1. [Overview](#overview)
